@@ -1,0 +1,555 @@
+/* ============================================
+   RESET Y VARIABLES
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #fafafa;
+    --text-primary: #1a1a1a;
+    --text-secondary: #8a8a8a;
+    --accent: #6b4f3d;
+    --border-color: rgba(26, 26, 26, 0.08);
+}
+
+/* ============================================
+   BODY Y EFECTOS GLOBALES
+   ============================================ */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    cursor: none;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(45deg, transparent 0%, rgba(255,255,255,0.1) 45%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0.1) 55%, transparent 100%);
+    pointer-events: none;
+    z-index: 10000;
+    opacity: 0.3;
+}
+
+/* ============================================
+   CURSOR PERSONALIZADO
+   ============================================ */
+.custom-cursor {
+    position: fixed;
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid var(--accent);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10001;
+    transition: transform 0.1s ease;
+    mix-blend-mode: multiply;
+}
+
+.cursor-follower {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10002;
+    transition: transform 0.15s ease;
+}
+
+/* ============================================
+   NAVEGACIÓN
+   ============================================ */
+.nav {
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    z-index: 1000;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.nav a {
+    color: var(--text-primary);
+    text-decoration: none;
+    margin-left: 30px;
+    transition: color 0.3s;
+    display: inline-block;
+    position: relative;
+}
+
+.nav a.active {
+    color: var(--accent);
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+/* ============================================
+   PÁGINAS Y TRANSICIONES
+   ============================================ */
+.page {
+    min-height: 100vh;
+    display: none;
+    opacity: 0;
+}
+
+.page.active {
+    display: block;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+.page-number {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    opacity: 0.4;
+    z-index: 999;
+    font-weight: 500;
+}
+
+/* ============================================
+   HOME HERO
+   ============================================ */
+.home-hero {
+    min-height: 100vh;
+    padding: 0 60px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-center {
+    text-align: center;
+    z-index: 10;
+    position: relative;
+}
+
+.hero-name {
+    font-size: 72px;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    margin-bottom: 15px;
+    line-height: 1;
+}
+
+.hero-subtitle {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    opacity: 0.6;
+    font-weight: 400;
+}
+
+/* ============================================
+   IMÁGENES FLOTANTES ASIMÉTRICAS
+   ============================================ */
+.floating-image {
+    position: absolute;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    transition: all 0.6s ease;
+    cursor: pointer;
+}
+
+.floating-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+    z-index: 20;
+}
+
+.floating-image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, transparent 60%, rgba(107, 79, 61, 0.15));
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.floating-image:hover::before {
+    opacity: 1;
+}
+
+.img-1 {
+    width: 280px;
+    height: 380px;
+    top: 15%;
+    left: 8%;
+}
+
+.img-2 {
+    width: 200px;
+    height: 260px;
+    top: 12%;
+    right: 12%;
+}
+
+.img-3 {
+    width: 240px;
+    height: 320px;
+    bottom: 15%;
+    left: 15%;
+}
+
+.img-4 {
+    width: 300px;
+    height: 220px;
+    bottom: 20%;
+    right: 8%;
+}
+
+/* ============================================
+   WORK PAGE - PROYECTOS
+   ============================================ */
+.work-grid {
+    padding: 100px 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.work-title {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    margin-bottom: 80px;
+    opacity: 0.6;
+    font-weight: 500;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px 40px;
+}
+
+.project-card {
+    position: relative;
+    cursor: pointer;
+    perspective: 1000px;
+    height: fit-content;
+}
+
+.project-card:nth-child(even) {
+    margin-top: 60px;
+}
+
+/* ============================================
+   FLIP CARDS
+   ============================================ */
+.card-inner {
+    position: relative;
+    width: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card-front,
+.card-back {
+    backface-visibility: hidden;
+    width: 100%;
+}
+
+.card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg);
+    background: var(--accent);
+    aspect-ratio: 3/4;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid var(--accent);
+}
+
+.card-back-title {
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: var(--bg-primary);
+}
+
+.card-back-description {
+    font-size: 11px;
+    line-height: 1.8;
+    color: var(--bg-primary);
+    opacity: 0.95;
+}
+
+.card-back-context {
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    margin-top: auto;
+    padding-top: 20px;
+    opacity: 0.8;
+    color: var(--bg-primary);
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.project-image {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: var(--bg-secondary);
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.project-image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, transparent 60%, rgba(107, 79, 61, 0.05));
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.project-card:hover .project-image::before {
+    opacity: 1;
+}
+
+.project-title {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.project-type {
+    font-size: 9px;
+    opacity: 0.4;
+    letter-spacing: 0.08em;
+}
+
+/* ============================================
+   ABOUT PAGE
+   ============================================ */
+.about-container {
+    min-height: 100vh;
+    padding: 100px 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+}
+
+.about-left {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+.about-photo {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: var(--bg-secondary);
+    margin-bottom: 25px;
+    border: 1px solid var(--border-color);
+    position: relative;
+    cursor: pointer;
+}
+
+.about-photo::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    right: -8px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--accent);
+    opacity: 0.15;
+    z-index: -1;
+}
+
+.about-info {
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    line-height: 2;
+    opacity: 0.5;
+}
+
+.about-right {
+    padding-top: 40px;
+}
+
+.about-right h2 {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    margin-bottom: 40px;
+    opacity: 0.6;
+    font-weight: 500;
+}
+
+.about-right p {
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+    opacity: 0.85;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-top: 60px;
+    border-top: 1px solid var(--border-color);
+}
+
+.skill-item {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    opacity: 0.7;
+    transition: all 0.3s;
+}
+
+.skill-item:hover {
+    opacity: 1;
+    color: var(--accent);
+    padding-left: 10px;
+}
+
+/* ============================================
+   CONTACT PAGE
+   ============================================ */
+.contact-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px;
+}
+
+.contact-content {
+    text-align: center;
+    max-width: 700px;
+}
+
+.contact-title {
+    font-size: 48px;
+    margin-bottom: 60px;
+    letter-spacing: -0.01em;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.contact-links {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    line-height: 3;
+}
+
+.contact-links a {
+    color: var(--text-primary);
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s;
+    position: relative;
+    font-weight: 400;
+}
+
+.contact-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.contact-links a:hover {
+    color: var(--accent);
+}
+
+.contact-links a:hover::after {
+    transform: scaleX(1);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+    .img-1, .img-2, .img-3, .img-4 {
+        width: 180px !important;
+        height: 240px !important;
+    }
+
+    .hero-name {
+        font-size: 52px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-name {
+        font-size: 42px;
+    }
+
+    .floating-image {
+        display: none;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .project-card:nth-child(even) {
+        margin-top: 0;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .about-left {
+        position: relative;
+        top: 0;
+    }
+
+    .nav a {
+        margin-left: 20px;
+    }
+
+    .contact-title {
+        font-size: 36px;
+    }
+}
