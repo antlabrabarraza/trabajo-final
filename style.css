@@ -360,6 +360,12 @@ body::after {
     transition: var(--transition);
 }
 
+.project-visual iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
 .project-item:hover .project-visual img,
 .project-item:hover .project-visual video {
     transform: scale(1.05);
