@@ -366,6 +366,11 @@ body::after {
     border: none;
 }
 
+/* YouTube específico - MÁS GRANDE */
+.project-visual-youtube {
+    height: 900px;
+}
+
 .project-item:hover .project-visual img,
 .project-item:hover .project-visual video {
     transform: scale(1.05);
@@ -678,6 +683,10 @@ body::after {
         height: 500px;
     }
 
+    .project-visual-youtube {
+        height: 600px;
+    }
+
     .carousel-wrapper {
         height: 600px;
     }
@@ -714,6 +723,10 @@ body::after {
 
     .about-grid {
         gap: 40px;
+    }
+
+    .project-visual-youtube {
+        height: 400px;
     }
 
     .carousel-wrapper {
