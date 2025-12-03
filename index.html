@@ -1,242 +1,262 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="robots" content="noindex, nofollow">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="style.css" rel="stylesheet"/>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <title>ANT LABRA _ PORTAOFLIO</title>
-  </head>
-
-
-
+    <title>ANT LABRA · Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-    <div class="custom-cursor"></div>
-    <div class="cursor-follower"></div>
-
-    <nav class="nav">
-        <a href="#home" class="nav-link active">inicio</a>
-        <a href="#work" class="nav-link">proyectos</a>
-        <a href="#about" class="nav-link">sobre mí</a>
-        <a href="#contact" class="nav-link">contacto</a>
+    <nav class="main-nav">
+        <a href="#home" class="nav-item active" data-section="home">inicio</a>
+        <a href="#about" class="nav-item" data-section="about">sobre mí</a>
+        <a href="#work" class="nav-item" data-section="work">trabajos</a>
+        <a href="#playground" class="nav-item" data-section="playground">fotografías</a>
+        <a href="#contact" class="nav-item" data-section="contact">contacto</a>
     </nav>
 
-
-    <!-- HOME PAGE -->
-    <div class="page active" id="home">
-        <div class="home-hero">
-            <div class="floating-image img-1"></div>
-            <div class="floating-image img-2"></div>
-            <div class="floating-image img-3"></div>
-            <div class="floating-image img-4"></div>
-
-            <div class="hero-center">
-                <h1 class="hero-name">ANT LABRA BARRAZA</h1>
-                <p class="hero-subtitle">DISEÑADORA INTEGRAL · SANTIAGO</p>
+    <section id="home" class="section active">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span>‎ </span>
+                    <span>ANT</span>
+                    <span>Labra Barraza</span>
+                </h1>
+                <p class="hero-subtitle">Estudiante de diseño integral</p>
+            </div>
+            <div class="hero-image">
+                <img src="yo.png" alt="ANT LABRA">
+                <div class="image-caption">Santiago, 2025</div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- WORK PAGE -->
-    <div class="page" id="work">
-        <div class="work-grid">
-            <div class="work-title">PROYECTOS SELECCIONADOS</div>
-            <div class="projects-grid">
-                
-                <!-- Proyecto 1 -->
-                <div class="project-card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <div class="project-image"></div>
-                            <div class="project-title">MEMORIA SONORA</div>
-                            <div class="project-type">Diseño Audiovisual / 2024</div>
-                        </div>
-                        <div class="card-back">
-                            <div class="card-back-title">MEMORIA SONORA</div>
-                            <div class="card-back-description">
-                                Proyecto de rescate cultural que explora las tradiciones orales 
-                                de barrios santiaguinos a través del diseño audiovisual. 
-                                Combinando entrevistas, animación y diseño sonoro para crear 
-                                un archivo vivo de memorias colectivas.
-                            </div>
-                            <div class="card-back-context">Curso: Taller de Diseño Audiovisual · UC</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Proyecto 2 -->
-                <div class="project-card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <div class="project-image"></div>
-                            <div class="project-title">CUERPOS EN MOVIMIENTO</div>
-                            <div class="project-type">Fotografía Documental / 2025</div>
-                        </div>
-                        <div class="card-back">
-                            <div class="card-back-title">CUERPOS EN MOVIMIENTO</div>
-                            <div class="card-back-description">
-                                Serie fotográfica documental sobre danza urbana en espacios públicos. 
-                                Explora la expresión corporal como forma de resistencia y ocupación 
-                                del espacio urbano, capturando la energía de bailarines callejeros.
-                            </div>
-                            <div class="card-back-context">Curso: Fotografía Documental · UC</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Proyecto 3 -->
-                <div class="project-card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <div class="project-image"></div>
-                            <div class="project-title">VOCES DEL BARRIO</div>
-                            <div class="project-type">Editorial + Audio / 2024</div>
-                        </div>
-                        <div class="card-back">
-                            <div class="card-back-title">VOCES DEL BARRIO</div>
-                            <div class="card-back-description">
-                                Revista híbrida que combina diseño editorial con códigos QR 
-                                vinculados a archivos sonoros. Cada página cuenta historias 
-                                vecinales a través de tipografía experimental y testimonios audio.
-                            </div>
-                            <div class="card-back-context">Curso: Diseño Editorial · UC</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Proyecto 4 -->
-                <div class="project-card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <div class="project-image"></div>
-                            <div class="project-title">RIZOMA CULTURAL</div>
-                            <div class="project-type">Identidad Visual / 2025</div>
-                        </div>
-                        <div class="card-back">
-                            <div class="card-back-title">RIZOMA CULTURAL</div>
-                            <div class="card-back-description">
-                                Sistema de identidad visual para colectivo artístico comunitario. 
-                                Diseño modular y flexible que permite la co-creación, reflejando 
-                                la naturaleza horizontal y colaborativa del colectivo.
-                            </div>
-                            <div class="card-back-context">Curso: Identidad Corporativa · UC</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Proyecto 5 -->
-                <div class="project-card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <div class="project-image"></div>
-                            <div class="project-title">LATIDOS</div>
-                            <div class="project-type">Video Experimental / 2024</div>
-                        </div>
-                        <div class="card-back">
-                            <div class="card-back-title">LATIDOS</div>
-                            <div class="card-back-description">
-                                Pieza audiovisual experimental que explora ritmos ancestrales 
-                                latinoamericanos fusionados con glitch art digital. Investiga 
-                                la memoria cultural a través del pulso y la repetición.
-                            </div>
-                            <div class="card-back-context">Curso: Video Experimental · UC</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Proyecto 6 -->
-                <div class="project-card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <div class="project-image"></div>
-                            <div class="project-title">HILOS INVISIBLES</div>
-                            <div class="project-type">Instalación Multimedia / 2025</div>
-                        </div>
-                        <div class="card-back">
-                            <div class="card-back-title">HILOS INVISIBLES</div>
-                            <div class="card-back-description">
-                                Instalación interactiva que visualiza conexiones humanas mediante 
-                                proyecciones y sonido espacial. Los visitantes activan narrativas 
-                                visuales al moverse por el espacio, creando una red de historias.
-                            </div>
-                            <div class="card-back-context">Curso: Diseño de Interacción · UC</div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- ABOUT PAGE -->
-    <div class="page" id="about">
+    <section id="about" class="section">
         <div class="about-container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 class="about-title">Sobre mí</h2>
+                    
+                    <div class="about-content">
+                        <p class="about-paragraph">
+                            Soy estudiante de tercer año en Diseño Integral en la Pontificia 
+                            Universidad Católica de Chile. Desde que tengo memoria, he estado 
+                            activamente involucrada en espacios culturales, particularmente a 
+                            través de la música, el arte y la danza. Este recorrido me ha 
+                            permitido desarrollar una profunda conexión con la expresión humana 
+                            y la creatividad.
+                        </p>
+                        
+                        <p class="about-paragraph">
+                            Mi enfoque actual en el diseño se centra en el rescate cultural, la 
+                            empatía hacia las personas y el compromiso social, valores fundamentales 
+                            para imaginar y construir futuros más justos y sensibles. Mi trabajo se 
+                            mueve entre lo gráfico, lo audiovisual, la música y la fotografía, 
+                            explorando cómo estos lenguajes impactan estética, cultural y políticamente.
+                        </p>
+                        
+                        <p class="about-paragraph">
+                            Mi búsqueda profesional es encontrar ese cruce único entre lo que me 
+                            apasiona y lo que el mundo necesita, para contribuir a construir 
+                            realidades más conscientes, sensibles y humanas.
+                        </p>
 
-            <div class="about-left">
-
-           <div class="about-photo">
-    <img src="yo.png" alt="Ant Labra">
-</div>
-
-                <div class="about-info">
-                    Santiago, Chile<br>
-                    Diseño Integral UC<br>
-                    Tercer Año<br>
-                    Disponible para<br>
-                    colaboraciones
+                        <div class="about-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Formación</span>
+                                <span class="detail-value">Diseño Integral, Tercer año</span>
+                                <span class="detail-value">Pontificia Universidad Católica de Chile</span>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <span class="detail-label">Experiencia</span>
+                                <span class="detail-value">Ayudante en Introducción al Proyecto de Diseño</span>
+                                <span class="detail-subtitle">Diseño UC · Ago. 2025 - Actualidad</span>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <span class="detail-label">Áreas de enfoque</span>
+                                <span class="detail-value">Rescate cultural, compromiso social, narrativa audiovisual</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="about-right">
-                <h2>SOBRE MÍ</h2>
-                <p>
-                    Soy estudiante de tercer año en Diseño Integral en la Pontificia Universidad 
-                    Católica de Chile. Desde que tengo memoria, he estado activamente involucrada 
-                    en espacios culturales, particularmente a través de la música, el arte y la danza. 
-                    Este recorrido me ha permitido desarrollar una profunda conexión con la expresión 
-                    humana y la creatividad.
-                </p>
-                <p>
-                    Mi enfoque actual en el diseño se centra en el rescate cultural, la empatía hacia 
-                    las personas y el compromiso social, valores fundamentales para imaginar y construir 
-                    futuros más justos y sensibles. Mi trabajo se mueve entre lo gráfico, lo audiovisual, 
-                    la música y la fotografía, explorando cómo estos lenguajes impactan estética, cultural 
-                    y políticamente.
-                </p>
-                <p>
-                    Mi búsqueda profesional es encontrar ese cruce único entre lo que me apasiona y lo 
-                    que el mundo necesita, para contribuir a construir realidades más conscientes, 
-                    sensibles y humanas.
-                </p>
-
-                <div class="skills-list">
-                    <div class="skill-item">Rescate Cultural</div>
-                    <div class="skill-item">Diseño Audiovisual</div>
-                    <div class="skill-item">Fotografía Documental</div>
-                    <div class="skill-item">Diseño Editorial</div>
-                    <div class="skill-item">Producción Musical</div>
-                    <div class="skill-item">Dirección de Arte</div>
-                    <div class="skill-item">Investigación Visual</div>
-                    <div class="skill-item">Diseño Social</div>
+                
+                <div class="about-visual">
+                    <div class="visual-card">
+                        <img src="yo2.jpg" alt="Antonia Labra">
+                    </div>
+                    <div class="image-caption">Santiago, 2025</div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- CONTACT PAGE -->
-    <div class="page" id="contact">
+    <section id="work" class="section">
+        <div class="work-container">
+            <h2 class="section-title">Proyectos Seleccionados</h2>
+            
+            <article class="project-item">
+                <div class="project-text">
+                    <span class="project-number">01</span>
+                    <h3 class="project-title">INGENUA</h3>
+                    <p class="project-type">Fotografía + Audiovisual</p>
+                    <p class="project-description">
+                        Revista híbrida que combina diseño editorial con códigos QR 
+                        vinculados a archivos sonoros. Cada página cuenta historias 
+                        vecinales a través de tipografía experimental y testimonios audio.
+                    </p>
+                    <span class="project-year">2024</span>
+                </div>
+                <div class="project-visual">
+                    <video src="0722.mp4" controls></video>
+                </div>
+            </article>
+
+            <article class="project-item">
+                <div class="project-text">
+                    <span class="project-number">02</span>
+                    <h3 class="project-title">LA FORMA DE LO INVISIBLE</h3>
+                    <p class="project-type">Fotografía Documental</p>
+                    <p class="project-description">
+                        Un ensayo audiovisual de la exploración sensible sobre aquello que no brilla, pero persiste. Este ensayo audiovisual propone una pausa en medio del ritmo contemporáneo para habitar lo mínimo, lo marginal, lo que rara vez se mira pero configura, silenciosamente, nuestra forma de estar en el mundo.
+
+Desde la mezcla de imagen poética, voz en off y archivo intervenido, la obra reflexiona sobre la invisibilidad como una forma sutil de presencia que moldea nuestra experiencia cotidiana.
+
+Estuve a cargo de la conceptualización visual, guión, dirección de fotografía, registro y montaje. A través de una narrativa íntima y fragmentaria, construí una mirada que busca hacer visible lo que normalmente se omite.
+                    </p>
+                    <span class="project-year">2025.06</span>
+                </div>
+                <div class="project-visual">
+                 <video src="ensayo.mp4" controls></video>
+                </div>
+            </article>
+
+            <article class="project-item">
+                <div class="project-text">
+                    <span class="project-number">03</span>
+                    <h3 class="project-title">ingenua.</h3>
+                    <p class="project-type">Video Experimental</p>
+                    <p class="project-description">
+                        Antonia Labra & María Paz Riesco
+                        Un experimento audiovisual íntimo y atmosférico que explora la delicadeza de lo que se desvanece antes de concretarse. Concebido desde una mirada sensible y contemplativa, este videoclip busca habitar una sensibilidad etérea, combinando luz suave y una puesta en escena mínima para narrar desde lo invisible.
+                    </p>
+                    <span class="project-year">2025.07</span>
+                </div>
+                <div class="project-visual">
+                <video src="ingenua.mp4" controls></video>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="playground" class="section">
+        <div class="work-container">
+            <div class="playground-header">
+                <h2 class="playground-title">Playground</h2>
+                <p class="playground-subtitle">Archivo visual clasificado</p>
+            </div>
+
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="todos">Todos</button>
+                <button class="filter-btn" data-filter="registros">Registros</button>
+                <button class="filter-btn" data-filter="polas">Polas</button>
+                <button class="filter-btn" data-filter="varios">Varios</button>
+            </div>
+
+            <div class="carousel-wrapper">
+                <div class="playground-grid" id="carousel">
+                    <!-- PRIMERO: REGISTROS CULTURALES -->
+                    <div class="photo-item" data-category="registros">
+                        <div class="photo-wrapper">
+                            <img src="amanecer1.jpg" alt="Registro 1">
+                        </div>
+                    </div>
+                    <div class="photo-item" data-category="registros">
+                        <div class="photo-wrapper">
+                            <img src="brp3.jpg" alt="Registro 2">
+                        </div>
+                    </div>
+                    <div class="photo-item" data-category="registros">
+                        <div class="photo-wrapper">
+                            <img src="brp5.jpg" alt="Registro 3">
+                        </div>
+                    </div>
+
+                    <!-- SEGUNDO: POLAS -->
+                    <div class="photo-item" data-category="polas">
+                        <div class="photo-wrapper">
+                            <img src="tuti.jpg" alt="Pola 1">
+                            <span class="photo-caption">polas de modelo</span>
+                        </div>
+                    </div>
+                    <div class="photo-item" data-category="polas">
+                        <div class="photo-wrapper">
+                            <img src="pola10.jpg" alt="Pola 2">
+                            <span class="photo-caption">polas de modelo</span>
+                        </div>
+                    </div>
+                    <div class="photo-item" data-category="polas">
+                        <div class="photo-wrapper">
+                            <img src="espalda.jpg" alt="Pola 3">
+                            <span class="photo-caption">polas de modelo</span>
+                        </div>
+                    </div>
+
+                    <!-- TERCERO: VARIOS -->
+                    <div class="photo-item" data-category="varios">
+                        <div class="photo-wrapper">
+                            <img src="paisaje2.jpg" alt="Varios 1">
+                        </div>
+                    </div>
+                    <div class="photo-item" data-category="varios">
+                        <div class="photo-wrapper">
+                            <img src="calle.jpg" alt="Varios 2">
+                        </div>
+                    </div>
+                    <div class="photo-item" data-category="varios">
+                        <div class="photo-wrapper">
+                            <img src="paisaje4.jpg" alt="Varios 3">
+                        </div>
+                    </div>
+                    <div class="photo-item" data-category="varios">
+                        <div class="photo-wrapper">
+                            <img src="jara.jpg">
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="carousel-controls">
+                    <button class="carousel-btn" id="prevBtn">←</button>
+                    <button class="carousel-btn" id="nextBtn">→</button>
+                </div>
+
+                <div class="scroll-indicator">Arrastra o usa las flechas</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
         <div class="contact-container">
-            <div class="contact-content">
-                <h2 class="contact-title">¡Construyamos algo!</h2>
-                <div class="contact-links">
-                    <a href="mailto:antonialabrabarraza@uc.cl">antonialabrabarraza@uc.cl</a><br>
-                    <a href="https://www.linkedin.com/in/antonia-labra-barraza-6b6877342/">LINKED IN</a><br>
-                    <a href="https://www.instagram.com/opticaquieta/">@ experimental</a><br>
-                    <a href="https://www.instagram.com/__temperaroja/">@ registro político</a>
-                </div>
+            <h2 class="contact-title">Conversemos</h2>
+            <p class="contact-intro">Siempre abierta a nuevas colaboraciones y proyectos con propósito</p>
+
+            <form class="contact-form">
+                <input type="text" placeholder="Tu nombre" required>
+                <input type="email" placeholder="Tu correo" required>
+                <textarea rows="5" placeholder="Cuéntame sobre tu proyecto" required></textarea>
+                <button type="submit" class="submit-btn">Enviar mensaje</button>
+            </form>
+
+            <div class="contact-links">
+                <a href="mailto:antonialabrabarraza@uc.cl">antonialabrabarraza@uc.cl</a>
+                <a href="https://www.instagram.com/opticaquieta/" target="_blank">Instagram</a>
+                <a href="https://www.linkedin.com/in/antonia-labra-barraza-6b6877342/" target="_blank">LinkedIn</a>
             </div>
         </div>
-    </div>
+    </section>
 
     <script src="script.js"></script>
 </body>
