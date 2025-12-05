@@ -26,7 +26,7 @@ body {
     font-family: var(--font-main);
     background: var(--white);
     color: var(--black);
-    font-size: 11px;
+    font-size: 13px;
     line-height: 1.6;
     font-weight: 400;
     overflow-x: hidden;
@@ -72,12 +72,12 @@ body::after {
 }
 
 .nav-item {
-    font-size: 9px;
+    font-size: 10px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--black);
     text-decoration: none;
-    opacity: 0.4;
+    opacity: 0.6;
     transition: var(--transition);
     font-weight: 400;
     writing-mode: vertical-rl;
@@ -146,9 +146,9 @@ body::after {
 }
 
 .hero-subtitle {
-    font-size: 11px;
+    font-size: 13px;
     letter-spacing: 0.08em;
-    opacity: 0.5;
+    opacity: 0.65;
     max-width: 320px;
     margin-top: 12px;
 }
@@ -172,9 +172,9 @@ body::after {
     position: absolute;
     bottom: -30px;
     right: 0;
-    font-size: 8px;
+    font-size: 10px;
     letter-spacing: 0.15em;
-    opacity: 0.4;
+    opacity: 0.5;
     text-transform: uppercase;
 }
 
@@ -195,10 +195,10 @@ body::after {
 }
 
 .about-title {
-    font-size: 9px;
+    font-size: 10px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    opacity: 0.3;
+    opacity: 0.4;
     margin-bottom: 60px;
     font-weight: 700;
 }
@@ -210,9 +210,9 @@ body::after {
 }
 
 .about-paragraph {
-    font-size: 11px;
+    font-size: 13px;
     line-height: 1.8;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .about-details {
@@ -231,24 +231,24 @@ body::after {
 }
 
 .detail-label {
-    font-size: 8px;
+    font-size: 10px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    opacity: 0.4;
+    opacity: 0.5;
     font-weight: 700;
     margin-bottom: 8px;
 }
 
 .detail-value {
-    font-size: 11px;
+    font-size: 13px;
     line-height: 1.6;
     opacity: 0.8;
 }
 
 .detail-subtitle {
-    font-size: 9px;
+    font-size: 11px;
     line-height: 1.6;
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 .about-visual {
@@ -286,10 +286,10 @@ body::after {
 }
 
 .section-title {
-    font-size: 9px;
+    font-size: 10px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    opacity: 0.3;
+    opacity: 0.4;
     margin-bottom: 100px;
     font-weight: 700;
 }
@@ -313,9 +313,9 @@ body::after {
 }
 
 .project-number {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
-    opacity: 0.2;
+    opacity: 0.3;
     letter-spacing: 0.1em;
 }
 
@@ -327,22 +327,22 @@ body::after {
 }
 
 .project-type {
-    font-size: 9px;
+    font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    opacity: 0.4;
+    opacity: 0.5;
 }
 
 .project-description {
-    font-size: 11px;
+    font-size: 13px;
     line-height: 1.7;
-    opacity: 0.7;
+    opacity: 0.8;
     margin-top: 8px;
 }
 
 .project-year {
-    font-size: 9px;
-    opacity: 0.3;
+    font-size: 10px;
+    opacity: 0.4;
     margin-top: auto;
 }
 
@@ -392,8 +392,8 @@ body::after {
 }
 
 .playground-subtitle {
-    font-size: 11px;
-    opacity: 0.5;
+    font-size: 13px;
+    opacity: 0.65;
 }
 
 .filter-container {
@@ -407,7 +407,7 @@ body::after {
     background: transparent;
     border: none;
     font-family: var(--font-main);
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     cursor: pointer;
@@ -415,7 +415,7 @@ body::after {
     transition: var(--transition);
     font-weight: 400;
     color: var(--black);
-    opacity: 0.4;
+    opacity: 0.5;
     position: relative;
 }
 
@@ -532,9 +532,9 @@ body::after {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 9px;
+    font-size: 10px;
     letter-spacing: 0.12em;
-    opacity: 0.5;
+    opacity: 0.6;
     text-transform: uppercase;
 }
 
@@ -552,9 +552,9 @@ body::after {
     bottom: -60px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 8px;
+    font-size: 10px;
     letter-spacing: 0.15em;
-    opacity: 0.3;
+    opacity: 0.4;
     text-transform: uppercase;
 }
 
@@ -579,8 +579,8 @@ body::after {
 }
 
 .contact-intro {
-    font-size: 11px;
-    opacity: 0.6;
+    font-size: 13px;
+    opacity: 0.7;
     margin-bottom: 60px;
 }
 
@@ -595,7 +595,7 @@ body::after {
 .contact-form textarea {
     padding: 16px 20px;
     font-family: var(--font-main);
-    font-size: 11px;
+    font-size: 13px;
     background: var(--white);
     border: 1px solid var(--grey-80);
     color: var(--black);
@@ -614,7 +614,7 @@ body::after {
     color: var(--white);
     border: none;
     font-family: var(--font-main);
-    font-size: 9px;
+    font-size: 11px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     cursor: pointer;
@@ -635,11 +635,11 @@ body::after {
 }
 
 .contact-links a {
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: 0.12em;
     color: var(--black);
     text-decoration: none;
-    opacity: 0.5;
+    opacity: 0.65;
     transition: var(--transition);
 }
 
