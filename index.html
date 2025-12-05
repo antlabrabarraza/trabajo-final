@@ -4,7 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ANT LABRA · Portfolio</title>
+    
+    <!-- 1. PRELOAD RECURSOS CRÍTICOS -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="yo.png" as="image">
+    
+    <!-- 2. PRECONNECT A DOMINIOS EXTERNOS -->
+    <link rel="preconnect" href="https://www.youtube.com">
+    <link rel="preconnect" href="https://player.vimeo.com">
+    
     <link rel="stylesheet" href="style.css">
+    
+    <!-- 3. DEFER SCRIPT PARA NO BLOQUEAR RENDER -->
+    <script src="script.js" defer></script>
 </head>
 <body>
     <nav class="main-nav">
@@ -27,7 +39,8 @@
                 <p class="hero-subtitle">Estudiante de diseño integral</p>
             </div>
             <div class="hero-image">
-                <img src="yo.png" alt="ANT LABRA">
+                <!-- 4. IMAGEN HERO SIN LAZY (ES LCP) -->
+                <img src="yo.png" alt="ANT LABRA" fetchpriority="high">
                 <div class="image-caption">Santiago, 2025</div>
             </div>
         </div>
@@ -86,7 +99,8 @@
                 
                 <div class="about-visual">
                     <div class="visual-card">
-                        <img src="yo2.jpg" alt="Antonia Labra">
+                        <!-- 5. LAZY LOADING PARA IMÁGENES FUERA DE VIEWPORT -->
+                        <img src="yo2.jpg" alt="Antonia Labra" loading="lazy">
                     </div>
                     <div class="image-caption">Santiago, 2025</div>
                 </div>
@@ -110,7 +124,8 @@
                     <span class="project-year">2025.07</span>
                 </div>
                 <div class="project-visual">
-                    <video src="ingenua.mp4" controls></video>
+                    <!-- 6. PRELOAD="NONE" PARA VIDEOS -->
+                    <video src="ingenua.mp4" controls preload="none" loading="lazy"></video>
                 </div>
             </article>
                 
@@ -126,11 +141,13 @@
                     <span class="project-year">2024.05</span>
                 </div>
                 <div class="project-visual project-visual-youtube">
+                    <!-- 7. LAZY LOADING PARA IFRAMES -->
                     <iframe 
                         src="https://www.youtube.com/embed/JD5BkY8Dqws" 
                         title="YouTube video player" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen>
+                        allowfullscreen
+                        loading="lazy">
                     </iframe>
                 </div>
             </article>
@@ -152,7 +169,7 @@ Estuve a cargo de la conceptualización visual, guión, dirección de fotografí
                     <span class="project-year">2025.06</span>
                 </div>
                 <div class="project-visual project-visual-youtube">
-                    <iframe src="https://player.vimeo.com/video/1143708076?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="width:100%;height:100%;" title="ensayo"></iframe>
+                    <iframe src="https://player.vimeo.com/video/1143708076?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="width:100%;height:100%;" title="ensayo" loading="lazy"></iframe>
                 </div>
             </article>
 
@@ -172,7 +189,8 @@ Estuve a cargo de la conceptualización visual, guión, dirección de fotografí
                         src="https://www.youtube.com/embed/hNlkHj3Ik84" 
                         title="YouTube video player" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen>
+                        allowfullscreen
+                        loading="lazy">
                     </iframe>
                 </div>
             </article>
@@ -194,7 +212,8 @@ Estuve a cargo de la conceptualización visual, guión, dirección de fotografí
                         src="https://www.youtube.com/embed/DKAHzURgldw"
                         title="YouTube video player" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen>
+                        allowfullscreen
+                        loading="lazy">
                     </iframe>
                 </div>
             </article>
@@ -217,62 +236,60 @@ Estuve a cargo de la conceptualización visual, guión, dirección de fotografí
 
             <div class="carousel-wrapper">
                 <div class="playground-grid" id="carousel">
-                    <!-- PRIMERO: REGISTROS CULTURALES -->
+                    <!-- TODAS CON LAZY LOADING -->
                     <div class="photo-item" data-category="registros">
                         <div class="photo-wrapper">
-                            <img src="amanecer1.jpg" alt="Registro 1">
+                            <img src="amanecer1.jpg" alt="Registro 1" loading="lazy">
                         </div>
                     </div>
                     <div class="photo-item" data-category="registros">
                         <div class="photo-wrapper">
-                            <img src="brp3.jpg" alt="Registro 2">
+                            <img src="brp3.jpg" alt="Registro 2" loading="lazy">
                         </div>
                     </div>
                     <div class="photo-item" data-category="registros">
                         <div class="photo-wrapper">
-                            <img src="brp5.jpg" alt="Registro 3">
+                            <img src="brp5.jpg" alt="Registro 3" loading="lazy">
                         </div>
                     </div>
 
-                    <!-- SEGUNDO: POLAS -->
                     <div class="photo-item" data-category="polas">
                         <div class="photo-wrapper">
-                            <img src="tuti.jpg" alt="Pola 1">
+                            <img src="tuti.jpg" alt="Pola 1" loading="lazy">
                             <span class="photo-caption">polas de modelo</span>
                         </div>
                     </div>
                     <div class="photo-item" data-category="polas">
                         <div class="photo-wrapper">
-                            <img src="pola10.jpg" alt="Pola 2">
+                            <img src="pola10.jpg" alt="Pola 2" loading="lazy">
                             <span class="photo-caption">polas de modelo</span>
                         </div>
                     </div>
                     <div class="photo-item" data-category="polas">
                         <div class="photo-wrapper">
-                            <img src="espalda.jpg" alt="Pola 3">
+                            <img src="espalda.jpg" alt="Pola 3" loading="lazy">
                             <span class="photo-caption">polas de modelo</span>
                         </div>
                     </div>
 
-                    <!-- TERCERO: VARIOS -->
                     <div class="photo-item" data-category="varios">
                         <div class="photo-wrapper">
-                            <img src="paisaje2.jpg" alt="Varios 1">
+                            <img src="paisaje2.jpg" alt="Varios 1" loading="lazy">
                         </div>
                     </div>
                     <div class="photo-item" data-category="varios">
                         <div class="photo-wrapper">
-                            <img src="calle.jpg" alt="Varios 2">
+                            <img src="calle.jpg" alt="Varios 2" loading="lazy">
                         </div>
                     </div>
                     <div class="photo-item" data-category="varios">
                         <div class="photo-wrapper">
-                            <img src="paisaje4.jpg" alt="Varios 3">
+                            <img src="paisaje4.jpg" alt="Varios 3" loading="lazy">
                         </div>
                     </div>
                     <div class="photo-item" data-category="varios">
                         <div class="photo-wrapper">
-                            <img src="jara.jpg" alt="Varios 4">
+                            <img src="jara.jpg" alt="Varios 4" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -307,7 +324,5 @@ Estuve a cargo de la conceptualización visual, guión, dirección de fotografí
         </div>
     </section>
     </main>
-
-    <script src="script.js"></script>
 </body>
 </html>
